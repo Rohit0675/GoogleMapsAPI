@@ -8,7 +8,7 @@ import java.net.URLEncoder;
 public class GoogleMapsAPI {
 
     public static void main(String[] args) {
-        String address = "TV Centre, Aurangabad"; 
+        String address = "Sukhsagar Nagar, Katraj"; 
         String apiKey = "AIzaSyBCiMR8LHK34EG5IAiEDA8vkphlGKD_ZIU"; 
 
         try {
