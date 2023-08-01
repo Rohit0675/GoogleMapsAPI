@@ -1,20 +1,27 @@
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.*;
 
 public class GoogleMapsAPI {
 
     public static void main(String[] args) {
-        String address = "Sukhsagar Nagar, Katraj"; 
-        String apiKey = "AIzaSyBCiMR8LHK34EG5IAiEDA8vkphlGKD_ZIU"; 
-
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your API key: ");
+        String apiKey = sc.nextLine();
+        
+        System.out.print("Enter your address: ");
+        String address = sc.nextLine();
+        sc.close();
+        
         try {
             String geocodingResponse = getGeocodingResponse(address, apiKey);
             System.out.println("Geocoding Response:");
-            System.out.println(geocodingResponse);
+            System.out.println(geocodingResponse);      
 
             
             double[] coordinates = parseGeocodingResponse(geocodingResponse);
